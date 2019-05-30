@@ -7,7 +7,7 @@ Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: The FMRIB UKBioBank Normalisation, Processing And Cleaning Kit
+Summary: The FMRIB UKBioBank Normalisation, Parsing And Cleaning Kit
 
 
 
