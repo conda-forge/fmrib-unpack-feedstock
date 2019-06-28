@@ -54,6 +54,7 @@ test:
     - funpack_demo -h
     - pytest -v --cov=funpack --pyargs funpack.tests -k "not (lowMemory or HDF or test_demo)"
 
+
 about:
   home: https://git.fmrib.ox.ac.uk/fsl/funpack/
   license: Apache-2.0
