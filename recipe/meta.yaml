@@ -1,6 +1,6 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "1.4.5" %}
-{% set sha256 = "10fe2efcbb3c40343ffc600cc0e95a63cbfea44377e0cf89cccc16709af9e0db" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "dd56c3fa70be243cf2aa2bf93db7c6cd80a0b8dcb7fe74964303231fe01dbbec" %}
 
 package:
   name: {{ name|lower }}
@@ -26,13 +26,14 @@ requirements:
     - python >=3.5
     - h5py
     - numpy
-    - pandas
+    - pandas >=0.24
     - pyparsing
     - six
     - pytables
     - jupyter
     - notebook
     - pygments
+    - bash_kernel
 
 test:
   requires:
@@ -46,12 +47,10 @@ test:
     - pygments
 
   commands:
-    # bash_kernel is not available on
-    # conda, but is imported by the
-    # funpack.scripts.demo module
-    - pip install bash_kernel
     - funpack -V
     - funpack_demo -h
+
+# check test markers
     - pytest -v --cov=funpack --pyargs funpack.tests -k "not (lowMemory or HDF or test_demo)"
 
 
