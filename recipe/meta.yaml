@@ -1,6 +1,6 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "dd56c3fa70be243cf2aa2bf93db7c6cd80a0b8dcb7fe74964303231fe01dbbec" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "b7f4c744a084539b6296b56708bcbcd3029d133aed86886d6b6bc81e33b9e225" %}
 
 package:
   name: {{ name|lower }}
@@ -42,9 +42,6 @@ test:
     - pytest
     - pytest-cov
     - jinja2
-    - notebook
-    - jupyter
-    - pygments
 
   commands:
     - funpack -V
