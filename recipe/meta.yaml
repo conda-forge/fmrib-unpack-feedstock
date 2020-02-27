@@ -1,6 +1,6 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "1.8.1" %}
-{% set sha256 = "248c27abfa96d22996303a3605083da8033065b9002304a87c8411d03de01a44" %}
+{% set version = "1.8.2" %}
+{% set sha256 = "ff93807faaeb5d68431facda930e0f96e28573b385f75727caf5ceae89b2d69b" %}
 
 package:
   name: {{ name|lower }}
@@ -13,10 +13,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-   - funpack      = funpack.main:main
-   - funpack_demo = funpack.scripts.demo:main
+    - funpack      = funpack.main:main
+    - funpack_demo = funpack.scripts.demo:main
 
 requirements:
   host:
@@ -56,7 +56,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'The FMRIB UKBioBank Normalisation, Parsing And Cleaning Kit'
+  summary: The FMRIB UKBioBank Normalisation, Parsing And Cleaning Kit
   dev_url: https://git.fmrib.ox.ac.uk/fsl/funpack/
 
 extra:
