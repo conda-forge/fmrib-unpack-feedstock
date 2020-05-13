@@ -33,6 +33,7 @@ requirements:
     - jupyter
     - notebook
     - pygments
+    - threadpoolctl
     - bash_kernel
 
 test:
