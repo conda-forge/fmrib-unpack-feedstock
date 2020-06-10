@@ -1,6 +1,6 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "2.3.1" %}
-{% set sha256 = "39314e587493fa2df12ee36b94e9b5c8cdcf799e62abaf762e783fbe0dbf22f5" %}
+{% set version = "2.3.2" %}
+{% set sha256 = "502e2558ba61b6e28152d4cec1141378d3f313c9a6b5407d6d612360066e446c" %}
 
 package:
   name: {{ name|lower }}
