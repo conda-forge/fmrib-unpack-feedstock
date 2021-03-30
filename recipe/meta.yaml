@@ -20,15 +20,14 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
   run:
-    - python >=3.5
+    - python >=3.7
     - h5py
     - numpy
     - pandas >=0.24
     - pyparsing
-    - six
     - pytables
     - jupyter
     - notebook
