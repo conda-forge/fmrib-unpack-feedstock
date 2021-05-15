@@ -33,6 +33,7 @@ requirements:
     - notebook
     - pygments
     - threadpoolctl
+    - typing-extensions
     - bash_kernel
 
 test:
