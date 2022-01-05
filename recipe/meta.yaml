@@ -1,6 +1,6 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "2.9.1" %}
-{% set sha256 = "6f5cafc0827bffd25628152d7b0b881fb9a680d8275129672db1160c77001542" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "5d1033beb8afb554732be2a9f641203d56cd37e646c6a90a37755b2a973f6841" %}
 
 package:
   name: {{ name|lower }}
@@ -15,8 +15,8 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - funpack      = funpack.main:main
-    - funpack_demo = funpack.scripts.demo:main
+    - fmrib_unpack      = funpack.main:main
+    - fmrib_unpack_demo = funpack.scripts.demo:main
 
 requirements:
   host:
@@ -45,8 +45,8 @@ test:
     - jinja2
 
   commands:
-    - funpack -V
-    - funpack_demo -h
+    - fmrib_unpack -V
+    - fmrib_unpack_demo -h
 
 # check test markers
     - pytest -v --cov=funpack --pyargs funpack.tests -k "not (lowMemory or HDF or test_demo)"
