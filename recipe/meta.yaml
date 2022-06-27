@@ -1,6 +1,5 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "3.2.3" %}
-{% set sha256 = "e66307a56644533a521dfb3335543413f490771c2fa6aa4f7fa92d6d275d4480" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: ffb025aae7e810d628f79b0a0ff6b241845f39a15d28e778ffd9f84246c4851a
 
 build:
   noarch: python
@@ -24,6 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.7
+    - fmrib-unpack-fmrib-config
     - h5py
     - numpy
     - pandas >=0.24
