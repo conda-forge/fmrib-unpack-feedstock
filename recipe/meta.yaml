@@ -1,5 +1,5 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "3.5.2" %}
+{% set version = "3.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5e4ff1f3cab45c57ec27d48ac8ac6123a504a32f17df62f59127a71e8ddf8f2a
+  sha256: aa4d5dcbbc3509f61a4fe810f1b84a4c3196bf364b5a60810e4ca14065303af6
 
 build:
   noarch: python
