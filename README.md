@@ -1,11 +1,11 @@
-About fmrib-unpack
-==================
+About fmrib-unpack-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fmrib-unpack-feedstock/blob/main/LICENSE.txt)
 
 Home: https://git.fmrib.ox.ac.uk/fsl/funpack/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fmrib-unpack-feedstock/blob/main/LICENSE.txt)
 
 Summary: The FMRIB UKBioBank Normalisation, Parsing And Cleaning Kit
 
