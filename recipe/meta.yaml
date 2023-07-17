@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - fmrib_unpack      = funpack.main:main
@@ -29,9 +29,7 @@ requirements:
     - pandas >=0.24
     - pyparsing
     - pytables
-    - jupyter
     - notebook
-    - pygments
     - threadpoolctl
     - typing-extensions
     - bash_kernel
