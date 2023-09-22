@@ -1,5 +1,5 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "3.7.0" %}
+{% set version = "3.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f7488218b3815bf290c91a7bed178f018d77619e80971a77569a7e343df70b2
+  sha256: b072dfc88277c48f38dd1194419c56c22f7f3ae544e25397c4a4570f3aa7189a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - fmrib_unpack      = funpack.main:main
