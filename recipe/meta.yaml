@@ -1,5 +1,5 @@
 {% set name = "fmrib-unpack" %}
-{% set version = "3.7.0" %}
+{% set version = "3.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9f7488218b3815bf290c91a7bed178f018d77619e80971a77569a7e343df70b2
+  sha256: b072dfc88277c48f38dd1194419c56c22f7f3ae544e25397c4a4570f3aa7189a
 
 build:
   noarch: python
@@ -19,16 +19,18 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - fmrib-unpack-fmrib-config
     - h5py
     - numpy
     - pandas >=0.24
     - pyparsing
     - pytables
+    - pygments
+    - nbclassic
     - notebook
     - threadpoolctl
     - typing-extensions
@@ -38,6 +40,7 @@ test:
   requires:
     - pip
     - coverage
+    - jupyter_server
     - pytest
     - pytest-cov
     - jinja2
