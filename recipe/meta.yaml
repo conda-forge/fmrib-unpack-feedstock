@@ -21,6 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - fmrib-unpack-fmrib-config
@@ -50,7 +51,7 @@ test:
     - fmrib_unpack -V
     - fmrib_unpack_demo -h
 
-# check test markers
+    # check test markers
     - pytest -v --cov=funpack --pyargs funpack.tests -k "not (lowMemory or HDF or test_demo)"
 
 
